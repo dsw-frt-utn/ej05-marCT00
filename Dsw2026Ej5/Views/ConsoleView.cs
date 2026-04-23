@@ -1,5 +1,6 @@
 ﻿namespace Dsw2026Ej5.Views;
 
+
 public class ConsoleView
 {
     private static List<VehiculoViewModel> _vehiculos = Controlador.GetVehiculos();

@@ -9,14 +9,7 @@ public class VehiculoCombustible: Vehiculo
     private double kilometrosPorLitro;
     private double litrosExtra;
 
-    public VehiculoCombustible(string patente, string marca, string modelo, int anio, double capacidadCarga, 
-        Sucursal sucursal, double kilometrosPorLitro, double litrosExtra) : base(VehiculoTipo.Combustible, patente, marca, modelo, anio, capacidadCarga, sucursal)
-    {
-        this.kilometrosPorLitro = kilometrosPorLitro;
-        this.litrosExtra = litrosExtra;
-    }
-
-    public double GetKilometrosPorLitro()
+   public double GetKilometrosPorLitro()
     {
         return kilometrosPorLitro;
     }
@@ -26,8 +19,15 @@ public class VehiculoCombustible: Vehiculo
         return litrosExtra;
     }
 
+    public VehiculoCombustible(string patente, string marca, string modelo, int anio, double capacidadCarga, 
+        Sucursal sucursal, double kilometrosPorLitro, double litrosExtra) : base(VehiculoTipo.Combustible, patente, marca, modelo, anio, capacidadCarga, sucursal)
+    {
+        this.kilometrosPorLitro = kilometrosPorLitro;
+        this.litrosExtra = litrosExtra;
+    }
+
     public override double CalcularConsumo(double kilometros)
     {
-        return kilometros * kilometrosPorLitro;
+        return kilometros / kilometrosPorLitro;
     }
 }
