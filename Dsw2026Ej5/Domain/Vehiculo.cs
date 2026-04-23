@@ -14,6 +14,7 @@ public abstract class Vehiculo
     private Sucursal sucursal;
     private VehiculoTipo tipo;
 
+
     protected Vehiculo(VehiculoTipo tipo, string patente, string marca, string modelo, int anio, double capacidadCarga, Sucursal sucursal)
     {
         this.patente = patente;
@@ -34,32 +35,26 @@ public abstract class Vehiculo
     {
         return marca;
     }
-
     public string GetModelo()
     {
         return modelo;
     }
-
     public int GetAnio()
     {
         return anio;
     }
-
     public double GetCapacidadCarga()
     {
         return capacidadCarga;
     }
-
     public Sucursal GetSucursal()
     {
         return sucursal;
     }
-
     public VehiculoTipo GetTipo()
     {
         return tipo;
     }
-
     public abstract double CalcularConsumo(double kilometros);
 
     public bool EsDe(VehiculoTipo tipo)
